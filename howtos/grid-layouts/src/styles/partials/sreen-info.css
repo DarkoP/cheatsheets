@@ -1,0 +1,53 @@
+.screen-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.screen {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.info:after {
+  content: "  - XS < 576px";
+  color:rgb(116, 116, 116);
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 576px) { 
+  .info:after {
+    content: "- SM < 768px";
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .info:after {
+    content: "- MD < 992px";
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .info:after {
+    content: "- LG < 1200px";
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .info:after {
+    content: "- XL < 1400px";
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+  .info:after {
+    content: "- XXL > 1400px";
+  }
+}

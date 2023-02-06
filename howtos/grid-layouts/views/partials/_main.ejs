@@ -7,11 +7,22 @@
       <% } %>
 
       <% if (locals.pages) { %>
-        <ul>
-          <% pages.forEach((page) => { %>
-            <li><a href='/<%= page.url %>'><%= page.title %></a></li>  
-          <% }) %>
-        </ul>
+        <nav>
+          <ul>
+            <% pages.forEach((page) => { %>
+              <li>
+                <a href='/<%= page.url %>'>
+                  <figure>
+                    <figcaption><%= page.title %></figcaption>  
+                    <img src="<%= page.url %>-xs.png" alt="<%= page.title %>" class="responsive">
+                    <img src="<%= page.url %>-sm.png" alt="<%= page.title %>" class="responsive">
+                    <img src="<%= page.url %>-md.png" alt="<%= page.title %>" class="responsive">
+                  </figure>
+                </a>
+              </li>  
+            <% }) %>
+          </ul>
+        </nav>
       <% } %>
     </article>
   </article>

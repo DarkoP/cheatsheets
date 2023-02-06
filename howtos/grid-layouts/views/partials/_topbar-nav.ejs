@@ -1,8 +1,8 @@
 <nav class="topbar-nav accent">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/standard">Standard</a></li>
-    <li><a href="/standard-two-sidebars">Two Sidebars</a></li>
-    <li><a href="/bottom-footer">Sticky Footer</a></li>
+    <li <% if (page_name === 'home') { %>class="active" <% } %>><a href="/">Home</a></li>
+    <li <% if (page_name === 'standard') { %>class="active" <% } %>><a href="/standard">Standard</a></li>
+    <li <% if (page_name === 'standard-two-sidebars') { %>class="active" <% } %>><a href="/standard-two-sidebars">Two Sidebars</a></li>
+    <li <% if (page_name === 'footer-bottom') { %>class="active" <% } %>><a href="/footer-bottom">Footer bottom</a></li>
   </ul>
 </nav>

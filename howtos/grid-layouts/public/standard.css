@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 nav ul {
   list-style: none;
@@ -12,17 +13,36 @@ nav ul {
   border: 1px solid rgb(116, 116, 116);
   border-radius: 5px;
 }
-.screen-info {
-  display: flex;
-  justify-content: center;
+.responsive {
+  width: 32%;
+  height: 290px;
 }
-.screen-info:after {
-  content: " - XS";
+figure {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid gray;
+  background-color: #fff;
+  border-radius: 5px;
+}
+figure:hover {
+  box-shadow: 0px 0px 4px 1px #000;
+}
+nav li {
+  padding: 0.25rem 0.5rem 0.25rem 0;
+}
+nav li a {
+  color: rgb(100, 100, 100);
+}
+nav li.active a,
+nav li:hover a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
 .container-fluid {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   gap: 1rem;
+  padding: 0 1rem;
 }
 .container {
   display: grid;
@@ -30,23 +50,66 @@ nav ul {
   gap: 1rem;
   max-width: 980px;
   margin: auto auto;
+  padding: 0 1rem;
 }
 .container > *,
 .container-fluid > * {
   grid-column: col-start / span 12;
   padding: 1rem;
 }
+.screen-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+.screen {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.info:after {
+  content: "  - XS < 576px";
+  color:rgb(116, 116, 116);
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+@media (min-width: 576px) { 
+  .info:after {
+    content: "- SM < 768px";
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .info:after {
+    content: "- MD < 992px";
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .info:after {
+    content: "- LG < 1200px";
+  }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .info:after {
+    content: "- XL < 1400px";
+  }
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+  .info:after {
+    content: "- XXL > 1400px";
+  }
+}
 /* ------------------ MEDIAQUERIES ---------------------- */
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 @media (min-width: 576px) { 
-  .screen-info:after {
-    content: " - SM";
-  }
-
   .topbar-nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .sidebar-nav {
@@ -75,10 +138,6 @@ nav ul {
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .screen-info:after {
-    content: " - MD";
-  }
-
   .sidebar-nav {
     grid-column: col-start / span 2;
     grid-row: 3 / 5;
@@ -96,19 +155,10 @@ nav ul {
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  .screen-info:after {
-    content: " - LG";
-  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-  .screen-info:after {
-    content: " - XL";
-  }
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
-  .screen-info:after {
-    content: " - XXL";
-  }
 }

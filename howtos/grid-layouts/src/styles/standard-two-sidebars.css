@@ -1,15 +1,12 @@
 @import 'partials/reset.css';
 @import 'partials/site.css';
 @import 'partials/grid-system.css';
+@import 'partials/sreen-info.css';
 
 /* ------------------ MEDIAQUERIES ---------------------- */
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 @media (min-width: 576px) { 
-  .screen-info:after {
-    content: " - SM";
-  }
-
   .content,
   .footer {
     grid-column: col-start 4 / span 9;
@@ -28,16 +25,12 @@
   .topbar-nav ul,
   .sidebar-nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .screen-info:after {
-    content: " - MD";
-  }
-
   .topbar-nav {
     grid-column: col-start / span 12;
   }
@@ -73,21 +66,12 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  .screen-info:after {
-    content: " - LG";
-  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-  .screen-info:after {
-    content: " - XL";
-  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
-  .screen-info:after {
-    content: " - XXL";
-  }
 }

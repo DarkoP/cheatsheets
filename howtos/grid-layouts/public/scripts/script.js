@@ -1,4 +1,4 @@
-let info = document.querySelector('.screen-info');
+let info = document.querySelector('.screen');
     
 let showWidth = (elem) => {
   elem.innerHTML = document.body.clientWidth;

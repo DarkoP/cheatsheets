@@ -103,6 +103,10 @@ nav li:hover a {
     content: "- XXL > 1400px";
   }
 }
+.container {
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
 /* ------------------ MEDIAQUERIES ---------------------- */
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */

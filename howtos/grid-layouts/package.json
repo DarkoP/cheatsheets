@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run postcss:watch\"",
     "dev": "nodemon -e ejs app.js",
-    "postcss:watch": "postcss src/styles/index.css src/styles/standard.css src/styles/standard-two-sidebars.css src/styles/bottom-footer.css --dir public -w"
+    "postcss:watch": "postcss src/styles/index.css src/styles/standard.css src/styles/standard-two-sidebars.css src/styles/footer-bottom.css --dir public -w"
   },
   "keywords": [
     "css",
