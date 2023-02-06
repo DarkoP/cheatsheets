@@ -1,0 +1,29 @@
+<main class="content accent">
+  <section>
+    <h1><%= subject %></h1>
+    <article>
+      <% if (content) { %>
+        <p><%= content %></p>
+      <% } %>
+
+      <% if (locals.pages) { %>
+        <nav>
+          <ul>
+            <% pages.forEach((page) => { %>
+              <li>
+                <a href='/<%= page.url %>'>
+                  <figure>
+                    <figcaption><%= page.title %></figcaption>  
+                    <img src="<%= page.url %>-xs.png" alt="<%= page.title %>" class="responsive">
+                    <img src="<%= page.url %>-sm.png" alt="<%= page.title %>" class="responsive">
+                    <img src="<%= page.url %>-md.png" alt="<%= page.title %>" class="responsive">
+                  </figure>
+                </a>
+              </li>  
+            <% }) %>
+          </ul>
+        </nav>
+      <% } %>
+    </article>
+  </article>
+</main>

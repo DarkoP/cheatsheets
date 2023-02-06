@@ -1,0 +1,68 @@
+@import 'partials/reset.css';
+@import 'partials/site.css';
+@import 'partials/grid-system.css';
+@import 'partials/sreen-info.css';
+
+/* ------------------ MEDIAQUERIES ---------------------- */
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+@media (min-width: 576px) { 
+  .topbar-nav ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .sidebar-nav {
+    grid-column: col-start / span 3;
+    grid-row: 3 / 5;
+  }
+
+  .sidebar-nav ul {
+    flex-direction: column;
+  }
+
+  .content {
+    grid-column: col-start 4 / span 9;
+    grid-row: 3 / 4;
+  }
+
+  .sidebar {
+    grid-column: col-start 4 / span 9;
+    grid-row: 4 / 5;
+  }
+
+  .footer {
+    grid-column: col-start / span 12;
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .sidebar-nav {
+    grid-column: col-start / span 2;
+    grid-row: 3 / 5;
+  }
+
+  .content {
+    grid-column: col-start 3 / span 8;
+    grid-row: 3 / 5;
+  }
+  
+  .sidebar {
+    grid-column: col-start 11 / span 2;
+    grid-row: 3 / 5;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+}

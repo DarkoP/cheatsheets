@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="standard-two-sidebars.css" type="text/css"/>
+    <title><%= subject %></title>
+  </head>
+  <body>
+    <div class="container">
+      <%- include('../partials/_header'); %>
+      <%- include('../partials/_topbar-nav'); %>
+      <%- include('../partials/_sidebar-nav'); %>
+      <%- include('../partials/_main'); %>
+      <%- include('../partials/_sidebar'); %>
+      <%- include('../partials/_sidebar-news'); %>
+      <%- include('../partials/_footer'); %>
+    </div>
+    
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
