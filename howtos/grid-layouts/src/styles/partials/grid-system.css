@@ -1,0 +1,19 @@
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 1rem;
+  max-width: 980px;
+  margin: auto auto;
+}
+
+.container > *,
+.container-fluid > * {
+  grid-column: col-start / span 12;
+  padding: 1rem;
+}

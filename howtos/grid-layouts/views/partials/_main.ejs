@@ -1,0 +1,18 @@
+<main class="content accent">
+  <section>
+    <h1><%= subject %></h1>
+    <article>
+      <% if (content) { %>
+        <p><%= content %></p>
+      <% } %>
+
+      <% if (locals.pages) { %>
+        <ul>
+          <% pages.forEach((page) => { %>
+            <li><a href='/<%= page.url %>'><%= page.title %></a></li>  
+          <% }) %>
+        </ul>
+      <% } %>
+    </article>
+  </article>
+</main>

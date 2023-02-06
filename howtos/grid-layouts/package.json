@@ -1,0 +1,29 @@
+{
+  "name": "grid-layouts",
+  "version": "0.0.1",
+  "description": "Grid Layouts",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently \"npm run dev\" \"npm run postcss:watch\"",
+    "dev": "nodemon -e ejs app.js",
+    "postcss:watch": "postcss src/styles/index.css src/styles/standard.css src/styles/standard-two-sidebars.css src/styles/bottom-footer.css --dir public -w"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "layout"
+  ],
+  "author": "DarkoP",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
+  }
+}

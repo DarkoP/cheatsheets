@@ -1,0 +1,118 @@
+/* reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+.accent {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 5px;
+}
+.screen-info {
+  display: flex;
+  justify-content: center;
+}
+.screen-info:after {
+  content: " - XS";
+}
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 1rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 1rem;
+  max-width: 980px;
+  margin: auto auto;
+}
+.container > *,
+.container-fluid > * {
+  grid-column: col-start / span 12;
+  padding: 1rem;
+}
+.container {
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+/* ------------------ MEDIAQUERIES ---------------------- */
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+@media (min-width: 576px) { 
+  .screen-info:after {
+    content: " - SM";
+  }
+
+  .topbar-nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sidebar-nav {
+    grid-column: col-start / span 3;
+    grid-row: 3 / 5;
+  }
+
+  .sidebar-nav ul {
+    flex-direction: column;
+  }
+
+  .content {
+    grid-column: col-start 4 / span 9;
+    grid-row: 3 / 4;
+  }
+
+  .sidebar {
+    grid-column: col-start 4 / span 9;
+    grid-row: 4 / 5;
+  }
+
+  .footer {
+    grid-column: col-start / span 12;
+  }
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .screen-info:after {
+    content: " - MD";
+  }
+
+  .sidebar-nav {
+    grid-column: col-start / span 2;
+    grid-row: 3 / 5;
+  }
+
+  .content {
+    grid-column: col-start 3 / span 8;
+    grid-row: 3 / 5;
+  }
+  
+  .sidebar {
+    grid-column: col-start 11 / span 2;
+    grid-row: 3 / 5;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .screen-info:after {
+    content: " - LG";
+  }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .screen-info:after {
+    content: " - XL";
+  }
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+  .screen-info:after {
+    content: " - XXL";
+  }
+}

@@ -17,3 +17,28 @@
 |`<section>`|	Defines a section in a document|
 |`<summary>`|	Defines a visible heading for a `<details>` element|
 |`<time>`|Defines a date/time|
+
+## `<section>` and `<article>` 
+
+Are conceptually similar and interchangeable. To decide which of these you should choose, take note of the following:
+
+* An article is intended to be independently distributable or reusable.
+* A section is a thematic grouping of content.
+
+```html
+<section>
+  <p>Top Stories</p>
+  <section>
+    <p>News</p>
+    <article>Story 1</article>
+    <article>Story 2</article>
+    <article>Story 3</article>
+  </section>
+  <section>
+    <p>Sport</p>
+    <article>Story 1</article>
+    <article>Story 2</article>
+    <article>Story 3</article>
+  </section>
+</section>
+```
