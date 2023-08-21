@@ -40,12 +40,12 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .sidebar-nav {
-    grid-column: col-start / span 2;
+    grid-column: col-start / span 3;
     grid-row: 3 / 5;
   }
 
   .content {
-    grid-column: col-start 3 / span 8;
+    grid-column: col-start 4 / span 7;
     grid-row: 3 / 5;
   }
   

@@ -45,17 +45,17 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .sidebar-nav {
-    grid-column: col-start / span 2;
+    grid-column: col-start / span 3;
     grid-row: 3 / 5;
   }
 
   .content {
-    grid-column: col-start 3 / span 8;
+    grid-column: col-start 4 / span 6;
     grid-row: 3 / 5;
   }
   
   .sidebar {
-    grid-column: col-start 11 / span 2;
+    grid-column: col-start 10 / span 3;
     grid-row: 3 / 5;
   }
 }

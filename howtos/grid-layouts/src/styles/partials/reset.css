@@ -1,11 +1,38 @@
 /* reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  box-sizing: border-box;
 }
 
-nav ul {
-  list-style: none;
-  padding-left: 0;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* focus */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: rgb(29, 46, 94) dotted 2px;
+  outline-offset: .05em;
+}
+
+/* 
+* + * {
+  margin-top: 1.5em;
+}
+
+:root {
+  font-size: calc(1vw + 1vh + .5vmin);
+} 
+*/
